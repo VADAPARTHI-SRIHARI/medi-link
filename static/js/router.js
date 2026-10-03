@@ -1,9 +1,13 @@
 /**
  * MEDI-LINK Client-Side Router
- * Matches URL hashes and pathnames to clean, modular view components.
+ * Layout:
+ * - Top Menu Bar & Header (Logo, App Name, User Profile Icon)
+ * - Body: Side Menu Bar (left) + Main Content (right)
+ * - Footer (bottom)
  */
 
 import { Navbar } from "./components/navbar.js";
+import { Sidebar } from "./components/sidebar.js";
 import { Footer } from "./components/footer.js";
 import { HomeView } from "./views/homeView.js";
 import { DashboardView } from "./views/dashboardView.js";
@@ -62,12 +66,18 @@ export class Router {
       }
     });
 
-    // Re-render navbar if state changes
+    // Re-render navbar & sidebar if state changes
     store.subscribe(() => {
       const navContainer = document.getElementById("navbar-container");
       if (navContainer) {
         navContainer.innerHTML = Navbar.render();
         Navbar.attachEvents();
+      }
+      const sideContainer = document.getElementById("sidebar-container");
+      if (sideContainer) {
+        const hash = window.location.hash || "#/";
+        sideContainer.innerHTML = Sidebar.render(hash);
+        Sidebar.attachEvents();
       }
     });
   }
@@ -87,27 +97,38 @@ export class Router {
     const appContainer = document.getElementById("app");
     if (!appContainer) return;
 
-    // Render Navbar & Footer shell
+    // Check if base layout exists
     let navContainer = document.getElementById("navbar-container");
+    let sidebarContainer = document.getElementById("sidebar-container");
     let mainContent = document.getElementById("main-content");
     let footerContainer = document.getElementById("footer-container");
 
     if (!navContainer) {
       appContainer.innerHTML = `
         <div id="navbar-container"></div>
-        <main id="main-content" class="flex-1" role="main"></main>
+        <div class="flex flex-1 min-h-[calc(100vh-140px)] relative">
+          <div id="sidebar-container"></div>
+          <main id="main-content" class="flex-1 overflow-x-hidden p-2 sm:p-4 md:p-6" role="main"></main>
+        </div>
         <div id="footer-container"></div>
       `;
       navContainer = document.getElementById("navbar-container");
+      sidebarContainer = document.getElementById("sidebar-container");
       mainContent = document.getElementById("main-content");
       footerContainer = document.getElementById("footer-container");
 
       navContainer.innerHTML = Navbar.render();
       Navbar.attachEvents();
+      sidebarContainer.innerHTML = Sidebar.render(hash);
+      Sidebar.attachEvents();
       footerContainer.innerHTML = Footer.render();
     } else {
       navContainer.innerHTML = Navbar.render();
       Navbar.attachEvents();
+      if (sidebarContainer) {
+        sidebarContainer.innerHTML = Sidebar.render(hash);
+        Sidebar.attachEvents();
+      }
     }
 
     // Match route
