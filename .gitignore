@@ -45,3 +45,9 @@ Thumbs.db
 *.db
 data/*.db
 medilink_user.db
+
+# Large Video Recordings (GitHub 100MB limit)
+*.mp4
+*.mov
+*.avi
+*.wmv
