@@ -1,0 +1,37 @@
+1.rmp,ayurvedic,clinic, doctor appointment or slot booking
+2.hospital op booking
+3.organ and blood donation and request sender forms and pages
+4.medicine booking
+5.ai integration:
+1.it can do the medicine prescription checker 
+2.nutritionist
+3.hospital suggestion at right time and correct treatment
+4.it behaves and have the knowledge like a doctor and it suggest if the problem is small it prescribes or suggest the hospital of ur disease it suggest the right treatment at right doctor  on  the near hospital or clinic  it suggest on the best doctor not an brand
+5.if our blood circulation heart beat is running out and give some notification for them and share to the famiy and lastly no response are occurred from both it would done as emergency alert to the hospitals from the near one and best one
+6.it works as an artificial doctor and it thinks and givev treatment like an a specialised doctoretc..
+7. and also add some more topics into the ai chatbot or like an Jarvis 
+6.it consist of one emergency button which behaves like a 2 functions like
+1.emeregency option which send the messeage to the all hospitals in the near one(like ambulance)
+2.emergency appointment booking option as works like it asks the which field your suffering and asks your reports if it is existed
+7.and it has one function like works as an offline emergency contact to give an emergency alert
+8.to provide the employement to the small scall doctors,ayurvedic doctors,medicines,rmp doctor,and it provides the individual employement without any sheltering like the bug hospitals
+
+
+
+sign/sign up
+1.registration and login of the user or patient with validations:
+name validation
+gmail validation
+mobile no validaton
+location valid
+password validation
+confirm password validation
+
+2.registration and login of the hospital staff management with validations:
+emp name valid
+mobile no valid
+gmail valid
+location valid
+password validation
+confirm password validation
+

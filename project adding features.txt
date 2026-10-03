@@ -1,0 +1,48 @@
+1.rmp,ayurvedic,clinic, doctor appointment or slot booking
+2.hospital op booking
+3.organ and blood donation and request sender forms and pages
+4.medicine booking
+5.ai integration:
+1.it check's wether the priscripton is correct or not 
+2.nutritionist and dite to maintain our helth
+3.hospital suggestion at right time and correct docter who treats for our problem
+4.it behaves and have the knowledge like a doctor and it suggest if the problem is small it prescribes or suggest the hospital of ur disease it suggest the right treatment at right doctor  on  the near hospital or clinic  it suggest on the best doctor not an brand
+5.if our blood circulation heart beat is running out and give some notification for them and share to the famiy and lastly no response are occurred from both it would done as emergency alert to the hospitals from the near one and best one
+6.it works as an artificial doctor and it thinks and givev treatment like an a specialised doctoretc..
+7. and also add some more topics into the ai chatbot or like an Jarvis 
+6.it consist of one emergency button which behaves like a 2 functions like
+1.emeregency option which send the messeage to the all hospitals in the near one(like ambulance)
+2.emergency appointment booking option as works like it asks the which field your suffering and asks your reports if it is existed
+7.and it has one function like works as an offline emergency contact to give an emergency alert
+8.to provide the employement to the small scall doctors,ayurvedic doctors,medicines,rmp doctor,and it provides the individual employement without any sheltering like the bug hospitals
+9.to check availability slots on hospitals and book the small scale doctors slots wich they come home and give treatment
+if is is an small disease and how much of doctor can capable that treatmen will done at home 
+10.to check the user to know which hospital is good for us and our deseas is the doctor specialised or not which we gave the treatmented person to know user which is best
+11.to know what are the hospitals we have in near and location and which doctor to consult
+12.the nearest medical shopes and the medicens given by docter can be found easly by just knowing where to go it shares the location of the wender who is seling the medicen so itis nearest to the user
+13.track queue and waiting time 
+14.find department for which the user should visit and conselt
+15. it should have the re-schedule , cancelation , conformation dilougs , eligibility check options these should be added for the user
+16.same fonts , buttons , spacing , icons , navigation , terminologie , status desigine and valadations etc
+17.appointment status conformation , waiting , completed , pending , cancle , re-shedule ( the re-shedule can be used for both users and the docters at the emergency timeing)
+18.make all the apointment status functions in a single page 
+19.every function should have there own page to avoid the lag and breaking issus
+
+
+sign/sign up
+1.registration and login of the user or patient with validations:
+name validation
+gmail validation
+mobile no validaton
+location valid
+password validation
+confirm password validation
+
+2.registration and login of the hospital staff management with validations:
+emp name valid
+mobile no valid
+gmail valid
+location valid
+password validation
+confirm password validation
+

@@ -1,0 +1,175 @@
+/* MEDI-LINK Custom Stylesheet
+   Tagline: "Right Care. Right Doctor. Right Place. Right Time."
+   Accessibility, High-Contrast Easy Mode, and Healthcare Theme
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary-blue: #0284c7;
+  --primary-blue-dark: #0369a1;
+  --primary-teal: #0d9488;
+  --primary-green: #059669;
+  --accent-red: #dc2626;
+  --accent-amber: #d97706;
+  --bg-slate: #f8fafc;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-color: #e2e8f0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-slate);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, .brand-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ECG Pulse Animation */
+@keyframes ecg-pulse {
+  0% { transform: scale(1); opacity: 0.9; }
+  50% { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.9; }
+}
+
+.pulse-card {
+  animation: ecg-pulse 2.2s infinite ease-in-out;
+}
+
+/* Heartbeat Animation for Emergency SOS */
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.15); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.15); }
+  70% { transform: scale(1); }
+}
+
+.heartbeat-btn {
+  animation: heartbeat 1.8s infinite;
+}
+
+/* Gradient accents */
+.medilink-gradient {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+}
+
+.medilink-gradient-text {
+  background: linear-gradient(135deg, #0284c7 0%, #059669 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ==============================================================
+   ACCESSIBILITY & EASY MODE (Elderly & High-Contrast Mode)
+   ============================================================== */
+body.easy-mode {
+  font-size: 1.25rem !important;
+  line-height: 1.7 !important;
+  background-color: #fdfdfd !important;
+  color: #000000 !important;
+}
+
+body.easy-mode h1 { font-size: 2.5rem !important; }
+body.easy-mode h2 { font-size: 2.1rem !important; }
+body.easy-mode h3 { font-size: 1.75rem !important; }
+body.easy-mode p, body.easy-mode span, body.easy-mode label { font-size: 1.25rem !important; }
+
+body.easy-mode button, 
+body.easy-mode .btn-accessible {
+  min-height: 56px !important;
+  font-size: 1.3rem !important;
+  font-weight: 700 !important;
+  border-width: 3px !important;
+  border-color: #000000 !important;
+}
+
+body.easy-mode input, 
+body.easy-mode select, 
+body.easy-mode textarea {
+  min-height: 54px !important;
+  font-size: 1.3rem !important;
+  border: 3px solid #000000 !important;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.easy-mode .bg-white {
+  background-color: #ffffff !important;
+  border: 3px solid #000000 !important;
+}
+
+body.easy-mode .text-slate-500,
+body.easy-mode .text-slate-600,
+body.easy-mode .text-gray-500 {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+body.easy-mode .badge {
+  font-size: 1.1rem !important;
+  border: 2px solid #000000 !important;
+  padding: 6px 14px !important;
+}
+
+/* Clear keyboard focus states */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 3px solid #0284c7 !important;
+  outline-offset: 2px !important;
+}
+
+body.easy-mode button:focus-visible,
+body.easy-mode a:focus-visible {
+  outline: 4px solid #f59e0b !important;
+  outline-offset: 4px !important;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile responsive fixes */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.2rem !important;
+    line-height: 1.2 !important;
+  }
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
